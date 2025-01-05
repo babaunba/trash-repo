@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package tags.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/babaunba/project-management/api/pkg/proto/tags/v1;tags";
+
+service Tags {
+  rpc GenerateTags(GenerateTagsRequest) returns (GenerateTagsResponse) {
+    option (google.api.http) = {
+      post: "/v1/tags/generate"
+      body: "*"
+    };
+  }
+}
+
+message GenerateTagsRequest {
+  string content = 1;
+}
+
+message GenerateTagsResponse {
+  repeated string tags = 1;
+}
