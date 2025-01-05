@@ -8,6 +8,6 @@ generate:
 		--grpc-gateway_opt paths=source_relative \
 		--openapiv2_out . \
 		--openapiv2_opt logtostderr=true \
-		$(shell find ./proto/ -name '*.proto')
-	rm $(shell find ./proto/ -name '*.proto')
+		$$(find ./proto/ -name '*.proto')
+	rm $$(find ./proto/ -name '*.proto')
 	mv proto/ gen/
