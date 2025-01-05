@@ -2,11 +2,11 @@
 // source: proto/tags/v1/tags.proto
 
 /*
-Package tags is a reverse proxy.
+Package tags_v1 is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package tags
+package tags_v1
 
 import (
 	"context"

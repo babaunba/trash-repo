@@ -4,7 +4,7 @@
 // - protoc             v5.29.2
 // source: proto/tags/v1/tags.proto
 
-package tags
+package tags_v1
 
 import (
 	context "context"

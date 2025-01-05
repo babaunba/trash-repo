@@ -4,7 +4,7 @@ package tags.v1;
 
 import "google/api/annotations.proto";
 
-option go_package = "github.com/babaunba/project-management/api/pkg/proto/tags/v1;tags";
+option go_package = "tags.v1";
 
 service Tags {
   rpc GenerateTags(GenerateTagsRequest) returns (GenerateTagsResponse) {
