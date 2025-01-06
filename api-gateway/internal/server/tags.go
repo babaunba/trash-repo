@@ -1,4 +1,4 @@
-package api
+package server
 
 import (
 	"context"
@@ -31,7 +31,7 @@ func (s *Server) GenerateTags(ctx context.Context, req *tags.GenerateTagsRequest
 		return
 	}
 
-	err = we.Get(ctx, resp)
+	err = we.Get(ctx, &resp)
 	if err != nil {
 		err = fmt.Errorf("unable to get workflow result: %w", err) // analogous
 		err = status.Error(codes.Internal, err.Error())
